@@ -60,17 +60,6 @@ policies:
     core_threshold: 0.3
     fallback_action_name: 'action_donknow'
 
-# pipeline:
-#   - name: "MitieNLP"
-#     model: "data/total_word_feature_extractor_zh.dat"
-#   - name: "JiebaTokenizer"
-#     dictionary_path: "data/jieba_userdict"
-#   - name: "MitieEntityExtractor"
-#   - name: "EntitySynonymMapper"
-#   - name: "RegexFeaturizer"
-#   - name: "MitieFeaturizer"
-#   - name: "SklearnIntentClassifier"
-
 pipeline:
   - name: "nlu_paddle.paddlenlp_tokenizer.PaddleNLPTokenizer"
     model_name: bert
