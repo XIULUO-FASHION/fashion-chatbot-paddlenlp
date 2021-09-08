@@ -1,0 +1,12 @@
+// Ways to say hello
+
+import ./common.chatito
+
+%[ask_bot]('training': '200', 'testing': '50')
+    *[50%] ~[is_bot]
+    *[50%] ~[hi?]~[is_bot]
+
+~[is_bot]
+    你是机器人吗
+    你是人还是机器人
+    你是真人吗

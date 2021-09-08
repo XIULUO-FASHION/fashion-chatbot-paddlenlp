@@ -1,0 +1,125 @@
+version: "2.0"
+
+slots:
+  category:
+    type: text
+  color:
+    type: text
+  material:
+    type: text
+  gender:
+    type: text
+  sleeve:
+    type: text
+  pattern:
+    type: text
+  style:
+    type: text
+
+intents:
+  - first: {triggers: action_first}
+  - greet
+  - bye
+  - affirmative
+  - negative
+  - tell_category
+  - tell_color
+  - tell_material
+  - tell_gender
+  - tell_sleeve
+  - tell_pattern
+  - redesign
+  - ask_bot
+  - tell_style
+  - restyle
+
+entities:
+  - category
+  - color
+  - material
+  - gender
+  - sleeve
+  - pattern
+  - style
+
+responses:
+  utter_first:
+    - text: "Hi，你好吖~欢迎来到修罗设计坊！我是设计师小E，你的AI定制顾问。请问你想要定制什么衣服呢？（我们现在支持各种上衣、裙子、裤子和夹克）"
+  
+  utter_greet:
+    - text: "Hi~"
+    - text: "你好吖～"
+  
+  utter_goodbye:
+    - text: "再见，期待下次光临～"
+    - text: "拜拜，希望你满意我们的设计～"
+  
+  utter_donknow:
+    - text: "啊噢，我没有理解您说的话。您可说：重新设计。我们将为您从头再开始设计>_<"
+  
+  utter_redesign:
+    - text: "您这次是需要什么版型呢"
+    - text: "您这次是设计什么类别的衣服呢"
+  
+  utter_restyle:
+    - text: "您需要换成什么样的风格呢？"
+    - text: "您这次是需要什么风格呢？"
+
+  utter_color:
+    - text: "请问您需要什么颜色呢？"
+    - text: "请问您喜欢什么颜色呢？"
+    - text: "您想要什么颜色呢？"
+
+  utter_style:
+    - text: "请问您喜欢什么风格呢？"
+    - text: "哪种风格你最喜欢？"
+    - text: "想体验一下什么样的风格呢？"
+  
+  utter_pattern:
+    - text: "请问您需要纯色，还是印花的呢"
+  
+  utter_sleeve:
+    - text: "请问您需要的袖子是什么样的呢？长袖、短袖 or 无袖呢"
+  
+  utter_material:
+    - text: "请问您需要什么材质呢？例如：丝绸、羊绒、牛仔布等"
+  
+  utter_gender:
+    - text: "请问您是男士还是女士呢"
+  
+  utter_wait_style:
+    - text: "正在为您检索风格哦..."
+    - text: "请稍后，您需要的风格马上出来..."
+    - text: "风格生成中..."
+
+  utter_wait:
+    - text: "稍等片刻哦，正在为您设计..."
+    - text: "正在为您努力设计中..."
+    - text: "马上设计好..."
+
+  utter_search:
+    - text: "稍等，我们正在为您设计..."
+  
+  utter_bot:
+    - text: "我是机器人哦，你的专属设计师小E"
+
+actions:
+  - utter_greet
+  - utter_color
+  - utter_search
+  - utter_pattern
+  - utter_sleeve
+  - utter_redesign
+  - utter_bot 
+  - action_first
+  - action_donknow
+  - action_redesign
+  - action_color
+  - action_pattern
+  - action_sleeve
+  - action_search
+  - action_style
+
+session_config:
+  session_expiration_time: 60  # value in minutes, 0 means infinitely long
+  carry_over_slots_to_new_session: true  # set to false to forget slots between sessions

@@ -1,0 +1,89 @@
+﻿label,task,task_fine,label_zh,task_zh,task_fine_zh
+dress,category,coarse,连衣裙,类别,粗类
+Casual and day dress,category,dress,休闲裙,类别,连衣裙
+Cocktail dress,category,dress,酒会礼服,类别,连衣裙
+Gowns,category,dress,礼裙,类别,连衣裙
+Maxi and long dress,category,dress,连衣长裙,类别,连衣裙
+Mini and short dress,category,dress,连衣短裙,类别,连衣裙
+jacket,category,coarse,夹克,类别,粗类
+Blazers jacket,category,jacket,运动夹克,类别,夹克
+Suit jacket,category,jacket,西装外套,类别,夹克
+Casual jacket,category,jacket,休闲夹克,类别,夹克
+Denim jacket,category,jacket,牛仔夹克,类别,夹克
+Fur jacket,category,jacket,皮草外套,类别,夹克
+Leather jacket,category,jacket,皮夹克,类别,夹克
+Padded and down jacket,category,jacket,羽绒夹克,类别,夹克
+Waistcoats and gilets,category,jacket,马甲,类别,夹克
+pants,category,coarse,裤子,类别,粗类
+Cargo pants,category,pants,工装裤,类别,裤子
+Casual pants,category,pants,休闲裤,类别,裤子
+Cropped pants,category,pants,九分裤,类别,裤子
+Formal pants,category,pants,正装裤,类别,裤子
+Full-length pants,category,pants,长裤,类别,裤子
+Harem pants,category,pants,哈伦裤,类别,裤子
+Leggings,category,pants,紧身裤,类别,裤子
+Skinny pants,category,pants,修身裤,类别,裤子
+Straight-leg pants,category,pants,直筒裤,类别,裤子
+Wide-leg and palazzo pants,category,pants,宽腿裤,类别,裤子
+skirt,category,coarse,裙子,类别,粗类
+Knee-length skirt,category,skirt,及膝裙,类别,裙子
+Maxi skirt,category,skirt,长裙,类别,裙子
+Mid-length skirt,category,skirt,中长裙,类别,裙子
+Mini skirt,category,skirt,超短裙,类别,裙子
+tops,category,coarse,上衣,类别,粗类
+Blouses,category,tops,女装衬衣,类别,上衣
+Long-sleeved tops,category,tops,长袖上衣,类别,上衣
+Shirts,category,tops,衬衣,类别,上衣
+Short-sleeve tops,category,tops,短袖上衣,类别,上衣
+Sleeveless and tank tops,category,tops,背心,类别,上衣
+T-shirts,category,tops,T恤,类别,上衣
+Black,color,coarse,黑色,颜色,粗类
+Blue,color,coarse,蓝色,颜色,粗类
+Brown,color,coarse,棕色,颜色,粗类
+Gray,color,coarse,灰色,颜色,粗类
+Green,color,coarse,绿色,颜色,粗类
+Metallic,color,coarse,金属色,颜色,粗类
+Multicolor,color,coarse,多色,颜色,粗类
+Natural,color,coarse,自然色,颜色,粗类
+Orange,color,coarse,橙色,颜色,粗类
+Pink,color,coarse,粉红色,颜色,粗类
+Purple,color,coarse,紫色,颜色,粗类
+Red,color,coarse,红色,颜色,粗类
+White,color,coarse,白色,颜色,粗类
+Yellow,color,coarse,黄色,颜色,粗类
+Canvas,Material,coarse,帆布,材质,粗类
+Cashmere,Material,coarse,羊绒,材质,粗类
+Chiffon,Material,coarse,雪纺,材质,粗类
+Corduroy,Material,coarse,灯芯绒,材质,粗类
+Cotton,Material,coarse,棉花,材质,粗类
+Denim,Material,coarse,牛仔布,材质,粗类
+Felt,Material,coarse,毛毡,材质,粗类
+Flannel,Material,coarse,法兰绒,材质,粗类
+Fleece,Material,coarse,合成羊毛,材质,粗类
+Fur,Material,coarse,皮草,材质,粗类
+Goose,Material,coarse,鹅毛,材质,粗类
+Lace,Material,coarse,蕾丝,材质,粗类
+Leather,Material,coarse,皮革,材质,粗类
+Linen,Material,coarse,亚麻,材质,粗类
+Neoprene,Material,coarse,氯丁橡胶,材质,粗类
+Rubber,Material,coarse,橡胶,材质,粗类
+Satin,Material,coarse,缎子,材质,粗类
+Silk,Material,coarse,丝绸,材质,粗类
+Suede,Material,coarse,人造麂皮,材质,粗类
+Synthetic,Material,coarse,合成,材质,粗类
+Tulle,Material,coarse,薄纱,材质,粗类
+Tweed,Material,coarse,花呢,材质,粗类
+Velvet,Material,coarse,天鹅绒,材质,粗类
+Wool,Material,coarse,羊毛,材质,粗类
+women,gender,coarse,男,性别,粗类
+men,gender,coarse,女,性别,粗类
+Sleeveless,sleeve,coarse,无袖,袖子,粗类
+Long Sleev,sleeve,coarse,长袖,袖子,粗类
+Short Sleev,sleeve,coarse,短袖,袖子,粗类
+print,pattern,coarse,纯色,花纹,粗类
+printed,pattern,coarse,印花,花纹,粗类
+future,style,coarse,未来,风格,粗类
+science and technology,style,coarse,科技,风格,粗类
+universe,style,coarse,宇宙,风格,粗类
+fantasy,style,coarse,玄幻,风格,粗类
+mechanical,style,coarse,机械,风格,粗类

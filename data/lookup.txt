@@ -1,0 +1,31 @@
+
+	"lookup_tables":[
+        {
+            "name": "category",
+            "elements": "data/lookup/category.txt"
+        },
+        {
+            "name": "color",
+            "elements": "data/lookup/color.txt"
+        },
+        {
+            "name": "gender",
+            "elements": "data/lookup/gender.txt"
+        },
+        {
+            "name": "material",
+            "elements": "data/lookup/material.txt"
+        },
+        {
+            "name": "pattern",
+            "elements": "data/lookup/pattern.txt"
+        },
+        {
+            "name": "sleeve",
+            "elements": "data/lookup/sleeve.txt"
+        },
+        {
+            "name": "style",
+            "elements": "data/lookup/style.txt"
+        }
+    ], 

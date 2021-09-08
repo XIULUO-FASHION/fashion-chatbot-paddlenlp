@@ -1,0 +1,180 @@
+import ./common.chatito
+
+
+# Ways to request an specific answer
+# NOTE: 60% of the examples should come from the first sentence, and 40% from the second
+# ('training': '500', 'testing': '100')
+
+%[tell_category]('training': '2000', 'testing': '400')
+    *[50%] ~[subject?]~[verb?]~[measure?]@[category]
+    *[30%] ~[subject?]~[verb?]~[measure?]@[color]~[的?]@[category]
+    *[10%] ~[verb?]@[category]~[qwd?]
+    *[10%] @[category]
+
+%[tell_color]('training': '1000', 'testing': '300')
+    *[20%] ~[subject?]~[verb?]@[color]
+    *[60%] @[color]
+    *[20%] @[category]~[have]@[color]~[qwd]
+
+%[tell_material]('training': '500', 'testing': '200')
+    *[50%] ~[subject?]~[verb?]@[material]
+    *[30%] @[material]
+    *[20%] @[category]~[have]@[material]~[qwd]
+
+%[tell_sleeve]('training': '500', 'testing': '200')
+    *[50%] ~[subject?]~[verb?]@[sleeve]
+    *[30%] @[sleeve]
+    *[20%] @[category]~[have]@[sleeve]~[qwd]
+
+%[tell_pattern]('training': '500', 'testing': '200')
+    *[30%] ~[subject?]~[verb?]@[pattern]
+    *[20%] ~[subject?]~[verb?]@[pattern]~[的?]@[category]
+    *[30%] @[pattern]
+    *[20%] @[category]~[have]@[pattern]~[qwd]
+
+%[tell_gender]('training': '500', 'testing': '200')
+    *[20%] ~[我是?]@[gender]~[的?]
+    *[15%] ~[我是?]@[gender]~[生?]
+    *[15%] ~[我是?]@[gender]~[性?]
+    *[50%] @[gender]
+
+%[tell_style]('training': '500', 'testing': '200')
+    *[30%] ~[subject?]~[verb?]@[style]
+    *[20%] ~[subject?]~[verb?]@[style]~[的?]@[category]
+    *[30%] @[style]
+    *[20%] @[category]~[have]@[style]~[qwd]
+
+~[qwd]
+    呢
+    吗
+    呀
+    好呢
+    吖
+    啊
+    阿
+    可以吗
+
+~[subject]
+    我
+    我想
+    你们可以
+    你能帮我
+    你们提供
+
+~[verb]
+    要
+    想要
+    设计
+    定制
+    喜欢
+
+~[have]
+    可以是
+    能做成
+    有
+
+~[measure]
+    一件
+    一条
+
+@[category]
+    连衣裙
+    休闲裙
+    酒会礼服
+    礼裙
+    连衣长裙
+    连衣短裙
+    夹克
+    运动夹克
+    西装外套
+    休闲夹克
+    牛仔夹克
+    皮草外套
+    皮夹克
+    羽绒夹克
+    马甲
+    裤子
+    工装裤
+    休闲裤
+    九分裤
+    正装裤
+    长裤
+    哈伦裤
+    紧身裤
+    修身裤
+    直筒裤
+    宽腿裤
+    裙子
+    及膝裙
+    长裙
+    中长裙
+    超短裙
+    上衣
+    女装衬衣
+    长袖上衣
+    衬衣
+    短袖上衣
+    背心
+    T恤
+
+@[color]
+    黑色
+    蓝色
+    棕色
+    灰色
+    绿色
+    金属色
+    多色
+    自然色
+    橙色
+    粉红色
+    紫色
+    红色
+    白色
+    黄色
+
+@[material]
+    帆布
+    羊绒
+    雪纺
+    灯芯绒
+    棉花
+    牛仔布
+    毛毡
+    法兰绒
+    合成羊毛
+    皮草
+    鹅毛
+    蕾丝
+    皮革
+    亚麻
+    氯丁橡胶
+    橡胶
+    缎子
+    丝绸
+    人造麂皮
+    合成
+    薄纱
+    花呢
+    天鹅绒
+    羊毛
+
+@[sleeve]
+    无袖
+    长袖
+    短袖
+
+@[pattern]
+    纯色
+    印花
+
+@[gender]
+    男
+    女
+
+@[style]
+    未来
+    科技
+    宇宙
+    玄幻
+    机械

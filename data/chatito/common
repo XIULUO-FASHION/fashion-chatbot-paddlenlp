@@ -1,0 +1,20 @@
+// Common entities to be imported and reused
+~[hi]
+    你好
+    您好
+    嗨
+    嘿
+    哈喽
+    hi
+    hello
+
+~[please]
+    请
+    帮
+
+~[thanks]
+    谢谢
+    谢了
+    thx
+    谢谢你
+    谢谢您

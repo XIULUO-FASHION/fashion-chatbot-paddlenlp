@@ -1,0 +1,30 @@
+import ./common.chatito
+
+%[redesign]('training': '200', 'testing': '50')
+    *[40%] ~[redo_design]
+    ~[dislike] ~[redo_design] ~[thanks?]
+    ~[dislike?] ~[redo_design] ~[dislike?]
+
+%[restyle]('training': '200', 'testing': '50')
+    *[40%] ~[redo_style]
+    ~[dislike] ~[redo_style] ~[thanks?]
+    ~[dislike?] ~[redo_style] ~[dislike?]
+
+~[dislike]
+    我不喜欢
+    这个款式我不喜欢
+    不想要这个
+
+~[redo_design]
+    我想重新设计
+    重新选款
+    可以重新设计
+    换个吧
+    重新设计
+    重新选择版型
+
+~[redo_style]
+    我想更换风格
+    重新选择风格
+    可以换风格
+    换个风格吧

@@ -1,0 +1,95 @@
+# # Configuration for Rasa NLU.
+# # https://rasa.com/docs/rasa/nlu/components/
+# language: en
+
+# pipeline:
+# # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
+# # # If you'd like to customize it, uncomment and adjust the pipeline.
+# # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
+# #   - name: WhitespaceTokenizer
+# #   - name: RegexFeaturizer
+# #   - name: LexicalSyntacticFeaturizer
+# #   - name: CountVectorsFeaturizer
+# #   - name: CountVectorsFeaturizer
+# #     analyzer: char_wb
+# #     min_ngram: 1
+# #     max_ngram: 4
+# #   - name: DIETClassifier
+# #     epochs: 100
+# #     constrain_similarities: true
+# #   - name: EntitySynonymMapper
+# #   - name: ResponseSelector
+# #     epochs: 100
+# #     constrain_similarities: true
+# #   - name: FallbackClassifier
+# #     threshold: 0.3
+# #     ambiguity_threshold: 0.1
+
+# # Configuration for Rasa Core.
+# # https://rasa.com/docs/rasa/core/policies/
+# policies:
+# # # No configuration for policies was provided. The following default policies were used to train your model.
+# # # If you'd like to customize them, uncomment and adjust the policies.
+# # # See https://rasa.com/docs/rasa/policies for more information.
+# #   - name: MemoizationPolicy
+# #   - name: RulePolicy
+# #   - name: UnexpecTEDIntentPolicy
+# #     max_history: 5
+# #     epochs: 100
+# #   - name: TEDPolicy
+# #     max_history: 5
+# #     epochs: 100
+# #     constrain_similarities: true
+
+
+language: "zh"
+
+policies:
+  - name: "rasa.core.policies.ted_policy.TEDPolicy"
+    epochs: 100
+    featurizer:
+      - name: MaxHistoryTrackerFeaturizer
+        max_history: 4
+        state_featurizer:
+          - name: LabelTokenizerSingleStateFeaturizer
+  - name: "rasa.core.policies.memoization.MemoizationPolicy"
+    max_history: 4
+  - name: "rasa.core.policies.mapping_policy.MappingPolicy"
+  - name: "rasa.core.policies.fallback.FallbackPolicy"
+    nlu_threshold: 0.5
+    core_threshold: 0.3
+    fallback_action_name: 'action_donknow'
+
+# pipeline:
+#   - name: "MitieNLP"
+#     model: "data/total_word_feature_extractor_zh.dat"
+#   - name: "JiebaTokenizer"
+#     dictionary_path: "data/jieba_userdict"
+#   - name: "MitieEntityExtractor"
+#   - name: "EntitySynonymMapper"
+#   - name: "RegexFeaturizer"
+#   - name: "MitieFeaturizer"
+#   - name: "SklearnIntentClassifier"
+
+pipeline:
+  - name: "nlu_paddle.paddlenlp_tokenizer.PaddleNLPTokenizer"
+    model_name: bert
+    model_weights: bert-wwm-chinese
+  - name: "nlu_paddle.paddlenlp_featurizer.PaddleNLPFeaturizer"
+    model_name: bert
+    model_weights: bert-wwm-chinese
+  - name: "DucklingEntityExtractor"
+    locale: "zh_CN"
+    timezone: "Asia/Shanghai"
+    dimensions:
+      - time
+  - name: "RegexFeaturizer"
+  - name: "LexicalSyntacticFeaturizer"
+  - name: "CountVectorsFeaturizer"
+  - name: "CountVectorsFeaturizer"
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 7
+  - name: "DIETClassifier"
+    epochs: 100
+  - name: "EntitySynonymMapper"
