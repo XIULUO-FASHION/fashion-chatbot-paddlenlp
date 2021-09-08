@@ -38,3 +38,4 @@ rasa shell -m models/20210908-014337.tar.gz --endpoints endpoints.yml
 ## 项目参考
 * [appointment-bot](https://github.com/lhr0909/appointment-bot)
 * https://aistudio.baidu.com/aistudio/projectdetail/1899120
+* [Translator](https://github.com/neverneverendup/Translator)
